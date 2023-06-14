@@ -11,7 +11,7 @@ class WordRelay extends Component {
     onSubmitForm = (e) => {
         e.preventDefault();
         if(this.state.word[this.state.word.length -1] === this.state.value[0]) {
-            this.setState({
+            this.state({
                 result:'딩동댕',
                 word: this.state.value,
                 value: '',
@@ -34,14 +34,14 @@ class WordRelay extends Component {
     onRefInput = (c) => {
         this.input = c;
     }
-    //input에 value와 onChange는 세트이다, 아니면 defaultValue 사용
+
     render() {
         return (
         <>
             <div>{this.state.word}</div>
             <form onSubmit={this.onSubmitForm}>
                 <input ref={this.onRefInput} value={this.state.value} onChange={this.onChangeInput} />
-                <button>입력!!</button>
+                <button>입력!</button>
             </form>
             <div>{this.state.result}</div>
         </>
