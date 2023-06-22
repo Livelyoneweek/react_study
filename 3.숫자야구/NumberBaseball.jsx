@@ -1,6 +1,6 @@
 const React = require('react');
 const { useRef, useState, useCallback } = React;
-const Try = require('./TryClass.jsx');
+const Try = require('./Try.jsx');
 
 const getNumbers = () => {
   const candidates = [1, 2, 3, 4, 5, 6, 7, 8, 9];
