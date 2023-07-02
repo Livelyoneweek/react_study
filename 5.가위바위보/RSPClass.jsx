@@ -53,7 +53,8 @@ class RSP extends Component {
       });
     }
   };
-
+  //  (choice) => { 이렇게 주면 안됨, 이유는  onClick={this.onClickBtn('바위')} 에서 바로 실행되버림
+  //  onClick은 원래 () => { this.onClickBtn('바위')} 이런식으로 함수를 전달해줘야하지만 위와 같이 쓰려면 함수 선언에 변화를줘야함
   onClickBtn = (choice) => () => {
     const {imgCoord} = this.state;
     clearInterval(this.interval);
